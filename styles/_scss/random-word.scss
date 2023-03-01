@@ -1,0 +1,46 @@
+.random-word {
+	display: inline-block;
+	letter-spacing: 3px;
+	// width: auto;
+  /*   transition: all 1.25s; */
+	animation: slidedown 4s infinite;
+	-webkit-animation: slidedown 4s infinite;
+	-moz-animation: slidedown 4s infinite;
+  }
+
+  @keyframes slidedown {
+	0% {
+	  opacity: 50;
+
+	}
+
+	5% {
+	  opacity: 0;
+	  transform: translateY(0.5em);
+
+	 @media screen and(max-width:768px){
+		transform: translateX(0.5em)!important;
+	  }
+	}
+
+	7% {
+	  transform: translateY(-1em);
+	 @media screen and(max-width:768px){
+
+		transform: translateX(-1em)!important
+	  }
+	}
+
+	10% {
+	  opacity: 0;
+	}
+
+	20% {
+	  transform: translateY(0);
+
+	 @media screen and(max-width:768px){
+		transform: translateX(0em)!important;
+	  }
+	  opacity: 100;
+	}
+  }

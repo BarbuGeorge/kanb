@@ -1,0 +1,85 @@
+.page-about{
+	.hero{
+		@extend .container;
+		@extend .position-relative;
+		padding-top:11rem;
+		padding-bottom:50vh!important;
+		@extend .text-center;
+		@include media-breakpoint-down(lg){
+			padding-bottom:15vh!important;
+		}
+	}
+	.what-we-do-section{
+		@extend .container;
+		.img-col{
+			img{
+				width:30rem;
+				height:30rem;
+				object-fit:cover;
+						}
+		}
+		.image-c, .image-e{
+			@extend .position-absolute;
+			@extend .img-fluid;
+			margin-bottom:-13rem;
+			width:18rem;
+			height:auto;
+			bottom: -2rem!important;
+			@include media-breakpoint-down(lg){
+				display:none;
+			}
+		}
+		.image-c{
+			margin-left:-3rem;
+		}
+		.image-e{
+			right:1rem;
+		}
+		.text-col{
+			@extend .position-relative;
+		}
+	}
+	.capabilities{
+		@extend .container;
+		@extend .extra-space, .top;
+		@extend .full-width-bg, .light-grey;
+		@extend .py-14;
+		@include media-breakpoint-down(lg){
+			background:$light-grey;
+			padding-top:4rem!important;
+			padding-bottom:1rem!important;
+		}
+		z-index:2!important;
+		> *{
+			z-index:2!important;
+		}
+		li{
+			@extend .text-uppercase;
+			font-size:1.5rem;
+			@include media-breakpoint-down(lg){
+				font-size:1.1rem;
+			}
+		}
+	}
+	.process-section{
+		@extend .container, .mt-lg-20, .mt-11;
+		@extend .extra-space, .top;
+	}
+
+	.cta-about-us{
+		@extend .container, .text-center;
+		padding:0 10.5rem;
+		@include media-breakpoint-down(lg){
+			padding:0 0rem;
+		}
+		h4{
+			@extend .fw-light;
+		}
+	}
+
+	.hamRotate{
+		.line{
+			stroke: #151515  !important;
+		}
+	}
+}

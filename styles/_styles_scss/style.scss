@@ -1,0 +1,62 @@
+/**
+ThemeName: KanB Agency
+**/
+@font-face {
+	font-family: "Poppins";
+	src: url("../../_assets/fonts/Poppins-Bold.ttf") format("truetype");
+	font-weight: 700;
+}
+@font-face {
+	font-family: "Poppins";
+	src: url("../../_assets/fonts/Poppins-Medium.ttf") format("truetype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "NunitoSans";
+	src: url("../../_assets/fonts/NunitoSans-Bold.ttf") format("truetype");
+	font-weight: 700;
+}
+@font-face {
+	font-family: "NunitoSans";
+	src: url("../../_assets/fonts/NunitoSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "NunitoSans";
+	src: url("../../_assets/fonts/NunitoSans-Light.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@import "../_scss/_variables.scss";
+@import "../../_assets/bootstrap-5.1.3/scss/bootstrap.scss";
+
+@import "../_scss/random-word.scss";
+@import "../_scss/full-width-bg.scss";
+@import "../_scss/layout.scss";
+@import "../_scss/buttons.scss";
+@import "../_scss/style.scss";
+@import "../_scss/table.scss";
+@import "../_scss/card.scss";
+
+@import "../_scss/header.scss";
+@import "../_scss/footer.scss";
+
+@import "../_scss/page-home.scss";
+@import "../_scss/page-about.scss";
+@import "../_scss/page-service.scss";
+@import "../_scss/page-blog.scss";
+@import "../_scss/page-contact.scss";
+@import "../_scss/single-post-page.scss";
+@import "../_scss/404.scss";
+@import "../_scss/page-thankyou.scss";
+
+
+
+
+
+
+
+
+

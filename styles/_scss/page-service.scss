@@ -1,0 +1,143 @@
+.page-service{
+
+	.hero-service{
+		@extend .pt-lg-20, .pt-17, .pb-lg-16, .pb-9;
+		.text-column{
+			@extend .d-flex, .flex-column, .justify-content-center;
+			p{
+				&:last-child{
+					margin-bottom:0!important;
+				}
+			}
+		}
+	}
+
+	.service-qualities{
+		@extend .py-12;
+		@extend .gradient-bg;
+		@extend .text-light;
+		h2{
+			@extend .extra-size-word;
+			@include media-breakpoint-down(lg){
+				margin-bottom:3rem;
+			}
+		}
+		.description{
+			h2{
+				@include media-breakpoint-down(lg){
+					font-size:3rem!important;
+				}
+			}
+		}
+		.qualities{
+			column-count:2;
+			@include media-breakpoint-down(md){
+				display:flex!important;
+				overflow-x:scroll!important;
+				overflow-y:hidden!important;
+				gap:4rem;
+
+			}
+			.quality-box{
+				@extend .mb-lg-6, .mb-0;
+				@extend .col-md-10, .col-9;
+				h3{
+					@extend .mb-3;
+
+				}
+				p{
+					@extend .mb-0;
+				}
+			}
+
+		}
+	}
+
+	.services-scrollspy{
+		@extend .container-fluid;
+		@extend .pb-10;
+		@extend .position-relative;
+		background:$light-grey;
+		@include media-breakpoint-down(lg){
+			padding:0!important;
+		}
+		.scrollspy-wrapper{
+			@extend .container;
+			@extend .d-flex;
+			@extend .position-relative;
+			@include media-breakpoint-down(lg){
+				padding:0!important;
+			}
+			.scrollspy-nav-wrapper{
+				@extend .col-4;
+				@extend .py-10;
+				@extend .position-relative;
+				@include media-breakpoint-down(lg){
+					display:none;
+				}
+				.scrollspy-nav{
+					@extend .sticky-top;
+					width: 377px;
+					@media screen and (min-width:992px) and (max-width:1120px){
+						width: 360px;
+					}
+					&.sticky-top{
+						top:105px;
+						z-index:8!important;
+					}
+					.scrollspy-menu-item{
+						@extend .d-block;
+						@extend .text-dark;
+						@extend .fw-bold;
+						transition: all 0.5s ease-in-out;
+						&.active-item{
+							@extend .text-primary;
+							transition: all 0.5s ease-in-out;
+						}
+					}
+				}
+			}
+			.scrollspy-content{
+				@extend .ms-auto;
+				@extend .col-lg-8, .col-12;
+				@extend .d-flex, .flex-column;
+				margin-right:-1.2rem;
+				@include media-breakpoint-down(lg){
+					margin-right:0!important;
+				}
+				.scrollspy-service-info{
+					@extend .h-100, .w-100;
+					@extend .py-10, .px-6;
+					&.dark{
+						@extend .bg-blue-dark;
+						@extend .text-light;
+					}
+					&.white{
+						background:#ffff!important;
+						@extend .text-dark;
+					}
+				}
+				h5{
+					font-size:1.2rem;
+				}
+				}
+			}
+		}
+		ul:not(footer ul, .navbar ul){
+			li{
+				@extend .d-flex;
+				@extend .py-3;
+				h5{
+					@extend .mb-0;
+					font-weight:500!important;
+				}
+				&:before{
+					position:relative;
+					top: 0.2rem;
+					margin-right: 0.5rem;
+					content:'\f054';
+					font-family:"FontAwesome";
+				}
+			}
+		}
+	}

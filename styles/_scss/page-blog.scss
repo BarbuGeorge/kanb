@@ -1,0 +1,6 @@
+.page-blog{
+	.cards-list{
+		@extend .container;
+		@extend .py-18;
+	}
+}

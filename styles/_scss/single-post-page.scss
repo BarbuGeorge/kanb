@@ -1,0 +1,72 @@
+.single-post-page{
+	@extend .pt-10, .pb-18;
+	.single-post-info{
+		@extend .container;
+		@extend .mb-8;
+	}
+	.single-post-thumbnail{
+		@extend .mb-12;
+		height:70vh;
+		background-size:cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+	.single-post-content{
+		@extend .col-lg-8, .col-12;
+	}
+	.single-post-share{
+		@extend .col-lg-4, .col-12;
+		@extend .mt-lg-0, .mt-4;
+		.share-post-icons{
+			@extend .d-flex;
+			@extend .justify-content-center;
+			@extend .mt-5;
+			a{
+				@extend .text-dark;
+				@extend .position-relative;
+				transition:all 0.5s ease-in-out;
+				transform: scale(1);
+				&:hover{
+					@extend .text-primary;
+					transform: scale(1.5);
+					transition:all 0.5s ease-in-out;
+				}
+			}
+		}
+	}
+
+	.related-articles{
+		@extend .container;
+		.row{
+			@include media-breakpoint-down(lg){
+				display:flex;
+				overflow-x:scroll;
+				flex-direction: row!important;
+				flex-wrap:nowrap!important;
+
+			}
+		}
+	}
+	h5{
+		margin-bottom:1rem;
+		margin-top:3rem!important;
+	}
+	h6{
+		margin-bottom:1rem!important;
+	}
+	p{
+		line-height: 30px;
+	}
+	ul{
+		li{
+			font-size:1.15rem;
+			margin-bottom:1rem;
+			&:before{
+				content:'\f054';
+				font-family:"FontAwesome";
+				margin-right:0.7rem;
+				color:$primary;
+			}
+		}
+	}
+}

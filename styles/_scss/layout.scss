@@ -1,0 +1,36 @@
+html,body{
+
+	@extend .position-relative;
+	width:100%;
+	min-height:100%;
+	scroll-behavior: smooth;
+
+}
+
+body{
+	@extend .h-100;
+	overflow-y:scroll;
+	overscroll-behavior: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+section{
+
+	padding-bottom:9rem;
+
+	@include media-breakpoint-down(lg){
+		padding-bottom:4rem!important;
+	}
+}
+
+
+.page-about-us, .page-home{
+	overflow-x:hidden;
+	body{
+		overflow-x:hidden;
+	}
+}

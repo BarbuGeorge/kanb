@@ -1,0 +1,190 @@
+.page-contact {
+  .section-contact {
+    @extend .pt-18;
+    @extend .container;
+    .wpcf7-form {
+      p {
+        margin-bottom: 0 !important;
+      }
+      input,
+      textarea {
+        @extend .w-100;
+        outline-width: 0;
+      }
+      .wpcf7-checkbox {
+        @extend .d-flex, .flex-wrap;
+        .wpcf7-list-item {
+          @extend .mb-lg-2, .mb-0, .ms-0;
+          @extend .col-xl-4, .col-6;
+          @extend .d-flex;
+          @extend .text-center;
+          @extend .justify-content-start;
+          @extend .text-uppercase;
+          @extend .py-lg-0, .py-3;
+          label {
+            @extend .mb-lg-2, .mb-0;
+            @extend .d-flex;
+            font-size: 17px !important;
+            cursor: pointer;
+            @extend .text-muted;
+            @include media-breakpoint-down(lg) {
+              font-size: 16px;
+            }
+          }
+          .wpcf7-list-item-label {
+            letter-spacing: 2px;
+          }
+        }
+      }
+      input[type="checkbox"] {
+        @extend .me-2;
+        width: 1.4rem !important;
+        height: auto !important;
+        &:checked {
+          .wpcf7-list-item-label {
+            @extend .text-primary;
+          }
+        }
+      }
+      .textarea-label {
+        font-size: 13px !important;
+      }
+      .form-input {
+        @extend .col-lg-5, .col-12;
+        @extend .mb-4;
+        @extend .position-relative;
+
+        label {
+          @extend .text-muted;
+          @extend .mb-1;
+          @extend .text-uppercase;
+          font-size: 13px;
+        }
+        input {
+          @extend .px-2, .py-2;
+
+          &:focus {
+            border-color: $primary !important;
+          }
+        }
+        input {
+          @extend .border,
+            .border-1,
+            .border-end-0,
+            .border-start-0,
+            .border-top-0,
+            .border-secondary,
+            .rounded-0;
+        }
+      }
+      textarea {
+        @extend .border,
+          .border-1,
+          .border-end-0,
+          .border-start-0,
+          .border-top-0,
+          .border-secondary,
+          .rounded-0;
+        @extend .mb-4;
+        height: 110px;
+      }
+      .wpcf7-submit {
+        @extend .btn, .outlined;
+      }
+      .checkboxes {
+        br {
+          @extend .d-none;
+        }
+      }
+    }
+    .contact-link {
+      @extend .text-dark;
+      font-size: 1.2rem;
+      i {
+        @extend .text-dark;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover {
+        i {
+          @extend .text-primary;
+          transform: scale(1.5);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    .social-icon {
+      i {
+        @extend .text-dark;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          @extend .text-primary;
+          transform: scale(1.5);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    .contact-sidebar-mobile {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+      @include media-breakpoint-down(lg) {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 15vh;
+        right: 0;
+        padding: 0 !important;
+        padding-top: 1.5rem !important;
+        width: 6rem;
+        text-align: center;
+        background: #f2f2f2;
+        transform: translateX(6rem);
+        transition: all 0.5s ease-in-out;
+        z-index: 8;
+        @extend .shadow;
+        .slide-out-btn {
+          width: 100%;
+          right: -130%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin-top: auto;
+          margin-bottom: 0;
+          transform: rotate(-90deg);
+          opacity: 100%;
+          transition: all 0.2s ease-in-out;
+        }
+        .slide-in-btn {
+          width: 100%;
+          top: 0;
+          bottom: 0;
+          margin-top: auto;
+          margin-bottom: 0;
+          opacity: 0%;
+          transition: all 0.2s ease-in-out;
+        }
+        i {
+          padding: 2rem 0;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        transform: translateX(22vw);
+      }
+      &.active {
+        transform: translateX(0);
+        transition: all 0.5s ease-in-out;
+        .slide-out-btn {
+          opacity: 0% !important;
+          transition: all 0.2s ease-in-out;
+          z-index: -1;
+        }
+        .slide-in-btn {
+          opacity: 100% !important;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}

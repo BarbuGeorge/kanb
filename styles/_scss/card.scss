@@ -1,0 +1,46 @@
+.card{
+	@extend .border-0;
+	@extend .shadow;
+	@extend .h-100;
+	@extend .rounded-0;
+	&.process-cards{
+		@extend .text-center;
+		@extend .px-4, .py-6;
+		h2{
+			@extend .mb-3;
+		}
+		p{
+			@extend .mb-0;
+		}
+	}
+}
+
+.blog-card{
+	.card-header{
+		@extend .px-4, .py-4, .border-0;
+		@extend .mb-2;
+		background:#fff;
+		.title{
+
+			@extend .text-dark;
+
+		}
+		.date{
+			@extend .mb-0, .me-auto, .text-secondary;
+			font-size:0.9rem;
+		}
+	}
+	.card-body{
+		@extend .px-5, .py-7;
+	}
+	.thumbnail{
+
+		height:100%;
+		img{
+			@extend .h-100;
+			border-radius:0;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+}

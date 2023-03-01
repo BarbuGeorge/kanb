@@ -1,0 +1,28 @@
+.page-thankyou {
+  h1 {
+    position: relative;
+    display: inline-block;
+    color: $dark;
+    overflow: hidden;
+  }
+
+  &:before {
+    position: absolute;
+    content: ''; /* Prints the value of the attribute */
+    top: 0;
+    left: 0;
+    color: $primary!important;
+    text-decoration: underline;
+    overflow: hidden;
+    transition: width 275ms ease;
+    white-space: nowrap;
+	width:0;
+  }
+  &:hover {
+	cursor: pointer;
+	&:before{
+		width: 100%;
+		overflow: hidden;
+	}
+  }
+}

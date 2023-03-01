@@ -1,0 +1,55 @@
+.footer{
+	@extend .py-lg-10, .py-8;
+
+	@extend .bg-blue-dark, .text-light;
+	@extend .position-relative;
+	p{
+		font-size:0.9rem;
+	}
+
+	.footer-col{
+		@extend  .col-md-3, .col-12;
+		@extend .d-flex, .flex-column, .align-items-center;
+		@extend .mx-auto;
+		@extend .text-lg-start, .text-center;
+		ul{
+			li{
+				@extend .text-secondary;
+				&:not(:first-child){
+					@extend .mb-2;
+				}
+			}
+		}
+		.footer-title-list{
+			@extend .text-light;
+			@extend .mb-3;
+			font-size:1rem;
+		}
+
+		.qr-code{
+			@extend .img-fluid;
+			width:11rem;
+			height:auto;
+		}
+	}
+}
+
+.cta-footer{
+	@extend .container;
+	@extend .shadow;
+	@extend .position-absolute;
+	@extend .top-0, .start-0, .end-0, .mx-auto;
+	@extend .text-dark;
+	@extend .py-6;
+	background:#fff;
+	margin-top:-5rem;
+	@include media-breakpoint-up(lg){
+		width:70%;
+	}
+}
+
+.page-about-us, .page-services-wrp{
+	.footer{
+		padding-top:6rem!important;
+	}
+}

@@ -1,0 +1,32 @@
+.full-width-bg{
+	@extend .position-relative;
+	&.light-grey{
+		@extend .position-relative;
+		&:before{
+			@extend .position-absolute;
+			@extend .top-0;
+			@extend .start-0;
+			background-color:$light-grey;
+			width:100vw;
+			height:100%;
+			content:'';
+			z-index:-1;
+			@include media-breakpoint-down(lg){
+				display:none;
+			}
+		}
+		&:after{
+			@extend .position-absolute;
+			@extend .top-0;
+			@extend .end-0;
+			background-color:$light-grey;
+			width:100vw;
+			height:100%;
+			content:'';
+			z-index:-1;
+			@include media-breakpoint-down(lg){
+				display:none;
+			}
+		}
+	}
+}
